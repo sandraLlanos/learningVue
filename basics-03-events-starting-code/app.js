@@ -30,6 +30,12 @@ const app = Vue.createApp({
       // this.counter--;
     },
   },
+  computed: {
+    fullName() {
+      console.log('Running again');
+      return this.name + ' ' + 'Llanos';
+    },
+  },
 });
 
 app.mount('#events');

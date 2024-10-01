@@ -31,7 +31,9 @@
       <!-- <input type="text" v-bind:value="name" v-on:input="setName($event)" v-on:keyup.enter="confirmInput" > -->
       <input type="text" v-model="name" v-on:keyup.enter="confirmInput" >
       <button v-on:click="reset">Reset Input</button>
-      <p>Your Name: {{ confirmedName }}</p>
+      <!-- <p>Your Name: {{ confirmedName }}</p> -->
+      <p>Your Name: {{ fullName }}</p>
+
       <form v-on:submit.prevent="submitForm">
         <input type="text">
         <!-- <button v-on:click.prevent="submitForm">Submit</button> -->
