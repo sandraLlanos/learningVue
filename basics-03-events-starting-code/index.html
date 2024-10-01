@@ -23,7 +23,14 @@
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Results: {{ counter }}</p>
       <!-- <input type="text" v-model="name" > -->
-      <input type="text" v-on:input="setName($event, 'Llanos')" v-on:keyup.enter="confirmInput" >
+      <!-- <input type="text"v-on:input="setName($event, 'Llanos')" v-on:keyup.enter="confirmInput" > -->
+
+      <!-- <input type="text" v-model="name" v-on:input v-bind:value > 
+       v-model is simply just a shortcut for v-bind:value and v-on:input -->
+
+      <!-- <input type="text" v-bind:value="name" v-on:input="setName($event)" v-on:keyup.enter="confirmInput" > -->
+      <input type="text" v-model="name" v-on:keyup.enter="confirmInput" >
+      <button v-on:click="reset">Reset Input</button>
       <p>Your Name: {{ confirmedName }}</p>
       <form v-on:submit.prevent="submitForm">
         <input type="text">
